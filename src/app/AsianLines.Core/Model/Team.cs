@@ -8,6 +8,6 @@ namespace AsianLines.Core.Model
         public string Name { get; set; }
         public string Code { get; set; }
         public string HomeGround { get; set; }
-        public string Country { get; set; }
+        public string Tags { get; set; }
     }
 }

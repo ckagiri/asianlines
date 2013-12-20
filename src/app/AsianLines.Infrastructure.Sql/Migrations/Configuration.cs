@@ -1,3 +1,5 @@
+using AsianLines.Core.Model;
+
 namespace AsianLines.Infrastructure.Sql.Migrations
 {
     using System;
@@ -15,6 +17,24 @@ namespace AsianLines.Infrastructure.Sql.Migrations
         }
 
         protected override void Seed(Sql.Database.AdminDbContext context)
-        { }
+        {
+            context.Teams.AddOrUpdate(
+                p => p.Code,
+                new Team
+                    {
+                        Id = Guid.NewGuid(),
+                        Name = "Arsenal",
+                        Code = "ARS",
+                        HomeGround = "Emirates Stadium"
+                    },
+                new Team
+                    {
+                        Id = Guid.NewGuid(),
+                        Name = "Chelsea",
+                        Code = "CHE",
+                        HomeGround = "Stamford Bridge"
+                    }
+                );
+        }
     }
 }
