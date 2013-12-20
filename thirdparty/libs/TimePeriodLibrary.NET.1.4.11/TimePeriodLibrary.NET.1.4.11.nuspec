@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>TimePeriodLibrary.NET</id>
+    <version>1.4.11</version>
+    <title>Time Period Library for .NET</title>
+    <authors>Jani Giannoudis</authors>
+    <owners>Jani Giannoudis</owners>
+    <projectUrl>http://www.codeproject.com/Articles/168662/Time-Period-Library-for-NET</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Extensive time period calculations and individual calendar periods.</description>
+    <releaseNotes>- New class TimeLinePeriodEvaluator: Evaluate time periods by iterating through the time line</releaseNotes>
+    <copyright>(c) 2011-2012 by Itenso GmbH, Switzerland</copyright>
+    <language />
+    <tags>C# ASP.NET Windows .NET Mobile Silverlight C#4.0 Windows-Phone WinForms</tags>
+    <references>
+      <reference file="Itenso.TimePeriod.dll" />
+      <reference file="Itenso.TimePeriodTests.exe" />
+      <reference file="nunit-console-runner.dll" />
+      <reference file="nunit.core.dll" />
+      <reference file="nunit.core.interfaces.dll" />
+      <reference file="nunit.framework.dll" />
+      <reference file="nunit.util.dll" />
+    </references>
+  </metadata>
+</package>
