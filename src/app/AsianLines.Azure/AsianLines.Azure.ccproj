@@ -45,6 +45,14 @@
       <RoleName>AsianLines.Web.Admin</RoleName>
       <UpdateDiagnosticsConnectionStringOnPublish>True</UpdateDiagnosticsConnectionStringOnPublish>
     </ProjectReference>
+    <ProjectReference Include="..\AsianLines.Web.Public\AsianLines.Web.Public.csproj">
+      <Name>AsianLines.Web.Public</Name>
+      <Project>{74882c1a-5ab5-4249-8c10-268457d1f34b}</Project>
+      <Private>True</Private>
+      <RoleType>Web</RoleType>
+      <RoleName>AsianLines.Web.Public</RoleName>
+      <UpdateDiagnosticsConnectionStringOnPublish>True</UpdateDiagnosticsConnectionStringOnPublish>
+    </ProjectReference>
     <ProjectReference Include="..\WorkerRoleMessageProcessor\WorkerRoleMessageProcessor.csproj">
       <Name>WorkerRoleMessageProcessor</Name>
       <Project>{047f7409-40c1-41ee-905b-7fb441122fe5}</Project>
