@@ -5,7 +5,6 @@
                 teams = App.request("team:entities");
             App.execute("when:fetched", [teams], function () {
                 var x = teams;
-                debugger;
                 self.layout = self.getLayoutView();
                 self.listenTo(self.layout, "show", function () {
                     self.panelRegion();

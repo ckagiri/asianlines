@@ -11,6 +11,11 @@
         }
     };
 
+    App.on("teams:list", function () {
+        App.navigate("teams");
+        API.list();
+    });
+
     App.addInitializer(function () {
         return new TeamsApp.Router({
             controller: API

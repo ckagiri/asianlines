@@ -192,6 +192,9 @@
     <Content Include="Assets\img\glyphicons-halflings-white.png" />
     <Content Include="Assets\img\glyphicons-halflings.png" />
     <Content Include="Assets\js\main\app.js" />
+    <Content Include="Assets\js\main\apps\about\about_app.js" />
+    <Content Include="Assets\js\main\apps\about\show\show_controller.js" />
+    <Content Include="Assets\js\main\apps\about\show\show_view.js" />
     <Content Include="Assets\js\main\apps\config\storage\localstorage.js" />
     <Content Include="Assets\js\main\apps\header\header_app.js" />
     <Content Include="Assets\js\main\apps\header\list\list_controller.js" />
@@ -214,6 +217,7 @@
     <Content Include="Assets\js\main\config\marionette\regions\dialogs.js" />
     <Content Include="Assets\js\main\config\marionette\renderer.js" />
     <Content Include="Assets\js\main\controllers\_base.js" />
+    <Content Include="Assets\js\main\entities\header.js" />
     <Content Include="Assets\js\main\entities\team.js" />
     <Content Include="Assets\js\main\entities\_base\collection.js" />
     <Content Include="Assets\js\main\entities\_base\model.js" />
@@ -242,6 +246,9 @@
     <Content Include="Assets\js\vendor\underscore.js" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="Index.cshtml">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="Scripts\_references.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -273,9 +280,6 @@
       <Name>AsianLines.Infrastructure.Sql</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Content Include="Index.cshtml" />
-  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
@@ -292,7 +296,7 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerPort>56814</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>http://localhost:50622/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>

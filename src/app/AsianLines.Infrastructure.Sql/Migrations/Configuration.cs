@@ -10,7 +10,7 @@ namespace AsianLines.Infrastructure.Sql.Migrations
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    public sealed class Configuration : DbMigrationsConfiguration<Sql.Database.AdminDbContext>
+    public sealed class Configuration : DbMigrationsConfiguration<AdminDbContext>
     {
         public Configuration()
         {
