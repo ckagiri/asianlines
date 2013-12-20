@@ -1,5 +1,7 @@
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using AsianLines.Core.Model;
+using AsianLines.Core.Utils;
 using AsianLines.Infrastructure.Sql.Database;
 
 namespace AsianLines.Infrastructure.Sql.Migrations
@@ -327,7 +329,191 @@ namespace AsianLines.Infrastructure.Sql.Migrations
 
         private void AddFixturesToSeason(AdminDbContext context, List<League> leagues, List<Season> seasons, List<Team> teams)
         {
-
+            var now = DateTime.Now;
+            var epl = leagues.First(l => l.Code == "EPL").Id;
+            var eplSeason = context.Seasons.First(s => s.LeagueId == epl && s.Name == "2013 - 2014");
+            var eplTeams = teams.Skip(5).ToList();
+            var day1 = new MonToSunWeek().Start().AddDays(-4).AddHours(-3);
+            var day2 = new MonToSunWeek().Start().AddDays(-4);
+            var day3 = now.AddHours(10);
+            var day4 = now.AddHours(15);
+            var day5 = now.AddDays(7);
+            var day6 = now.AddDays(7).AddHours(3);
+            var eplFixtures = new List<Fixture>
+                                  {
+                                      new Fixture
+                                          {
+                                              Id = Guid.NewGuid(),
+                                              SeasonId = eplSeason.Id,
+                                              HomeTeamId = eplTeams[0].Id,
+                                              AwayTeamId = eplTeams[11].Id,
+                                              Venue = eplTeams[0].HomeGround,
+                                              KickOff = day1,
+                                              StartOfWeek = new MonToSunWeek(day1).Start(),
+                                              EndOfWeek = new MonToSunWeek(day1).End(),
+                                              HomeAsianHandicap = -1,
+                                              AwayAsianHandicap = 1,
+                                              AsianGoalsHandicap = 3,
+                                              HomeScore = 2,
+                                              AwayScore = 2,
+                                              MatchStatus = MatchStatus.Played,
+                                              Odds = new Collection<MatchOdds>
+                                                         {
+                                                             new MatchOdds
+                                                                 {
+                                                                     OddsType = OddsType.AsianHandicap,
+                                                                     Handicap = -1
+                                                                 },
+                                                             new MatchOdds
+                                                                 {
+                                                                     OddsType = OddsType.AsianGoals,
+                                                                     Handicap = 3
+                                                                 }
+                                                         }
+                                          },
+                                      new Fixture
+                                          {
+                                              Id = Guid.NewGuid(),
+                                              SeasonId = eplSeason.Id,
+                                              HomeTeamId = eplTeams[4].Id,
+                                              AwayTeamId = eplTeams[16].Id,
+                                              Venue = eplTeams[4].HomeGround,
+                                              KickOff = day2,
+                                              StartOfWeek = new MonToSunWeek(day2).Start(),
+                                              EndOfWeek = new MonToSunWeek(day2).End(),
+                                              HomeAsianHandicap = -1.25m,
+                                              AwayAsianHandicap = 1.25m,
+                                              AsianGoalsHandicap = 2.5m,
+                                              HomeScore = 2,
+                                              AwayScore = 3,
+                                              MatchStatus = MatchStatus.Played,
+                                              Odds = new Collection<MatchOdds>
+                                                         {
+                                                             new MatchOdds
+                                                                 {
+                                                                     OddsType = OddsType.AsianHandicap,
+                                                                     Handicap = -1.25m
+                                                                 },
+                                                             new MatchOdds
+                                                                 {
+                                                                     OddsType = OddsType.AsianGoals,
+                                                                     Handicap = 2.5m
+                                                                 }
+                                                         }
+                                          },
+                                      new Fixture
+                                          {
+                                              Id = Guid.NewGuid(),
+                                              SeasonId = eplSeason.Id,
+                                              HomeTeamId = eplTeams[3].Id,
+                                              AwayTeamId = eplTeams[10].Id,
+                                              Venue = eplTeams[3].HomeGround,
+                                              KickOff = day3,
+                                              StartOfWeek = new MonToSunWeek(day3).Start(),
+                                              EndOfWeek = new MonToSunWeek(day3).End(),
+                                              HomeAsianHandicap = -1.5m,
+                                              AwayAsianHandicap = 1.5m,
+                                              AsianGoalsHandicap = 2.75m,
+                                              Odds = new Collection<MatchOdds>
+                                                         {
+                                                             new MatchOdds
+                                                                 {
+                                                                     OddsType = OddsType.AsianHandicap,
+                                                                     Handicap = -1.5m
+                                                                 },
+                                                             new MatchOdds
+                                                                 {
+                                                                     OddsType = OddsType.AsianGoals,
+                                                                     Handicap = 2.75m
+                                                                 }
+                                                         }
+                                          },
+                                      new Fixture
+                                          {
+                                              Id = Guid.NewGuid(),
+                                              SeasonId = eplSeason.Id,
+                                              HomeTeamId = eplTeams[2].Id,
+                                              AwayTeamId = eplTeams[14].Id,
+                                              Venue = eplTeams[2].HomeGround,
+                                              KickOff = day4,
+                                              StartOfWeek = new MonToSunWeek(day4).Start(),
+                                              EndOfWeek = new MonToSunWeek(day4).End(),
+                                              HomeAsianHandicap = -1.75m,
+                                              AwayAsianHandicap = 1.75m,
+                                              AsianGoalsHandicap = 3.25m,
+                                              Odds = new Collection<MatchOdds>
+                                                         {
+                                                             new MatchOdds
+                                                                 {
+                                                                     OddsType = OddsType.AsianHandicap,
+                                                                     Handicap = -1.75m
+                                                                 },
+                                                             new MatchOdds
+                                                                 {
+                                                                     OddsType = OddsType.AsianGoals,
+                                                                     Handicap = 3.25m
+                                                                 }
+                                                         }
+                                          },
+                                      new Fixture
+                                          {
+                                              Id = Guid.NewGuid(),
+                                              SeasonId = eplSeason.Id,
+                                              HomeTeamId = eplTeams[4].Id,
+                                              AwayTeamId = eplTeams[1].Id,
+                                              Venue = eplTeams[4].HomeGround,
+                                              KickOff = day5,
+                                              StartOfWeek = new MonToSunWeek(day5).Start(),
+                                              EndOfWeek = new MonToSunWeek(day5).End(),
+                                              HomeAsianHandicap = 0,
+                                              AwayAsianHandicap = 0,
+                                              Odds = new Collection<MatchOdds>
+                                                         {
+                                                             new MatchOdds
+                                                                 {
+                                                                     OddsType = OddsType.AsianHandicap,
+                                                                     Handicap = 0
+                                                                 },
+                                                         }
+                                          },
+                                      new Fixture
+                                          {
+                                              Id = Guid.NewGuid(),
+                                              SeasonId = eplSeason.Id,
+                                              HomeTeamId = eplTeams[2].Id,
+                                              AwayTeamId = eplTeams[9].Id,
+                                              Venue = eplTeams[2].HomeGround,
+                                              KickOff = day6.AddHours(3),
+                                              StartOfWeek = new MonToSunWeek(day6).Start(),
+                                              EndOfWeek = new MonToSunWeek(day6).End(),
+                                              HomeAsianHandicap = -1,
+                                              AwayAsianHandicap = -1,
+                                          },
+                                      new Fixture
+                                          {
+                                              Id = Guid.NewGuid(),
+                                              SeasonId = eplSeason.Id,
+                                              HomeTeamId = eplTeams[1].Id,
+                                              AwayTeamId = eplTeams[13].Id,
+                                              Venue = eplTeams[1].HomeGround,
+                                              KickOff = day6.AddHours(6),
+                                              StartOfWeek = new MonToSunWeek(day6).Start(),
+                                              EndOfWeek = new MonToSunWeek(day6).End(),
+                                              HomeAsianHandicap = -1,
+                                              AwayAsianHandicap = -1,
+                                              AsianGoalsHandicap = 2.5m,
+                                              Odds = new Collection<MatchOdds>
+                                                         {
+                                                             new MatchOdds
+                                                                 {
+                                                                     OddsType = OddsType.AsianGoals,
+                                                                     Handicap = 2.5m
+                                                                 }
+                                                         }
+                                          }
+                                  };
+            eplFixtures.ForEach(f => context.Fixtures.Add(f));
+            context.SaveChanges();
         }
     }
 }
