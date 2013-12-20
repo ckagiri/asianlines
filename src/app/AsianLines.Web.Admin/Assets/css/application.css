@@ -1,0 +1,9 @@
+body {
+  padding-top: 60px; /* 60px to make the container make room for the navigation bar */
+}
+
+.opacity {
+  /*background: red;*/
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=40);
+  opacity: 0.4;
+}
