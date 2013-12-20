@@ -1,4 +1,6 @@
-﻿using AsianLines.Infrastructure.Sql.Database;
+﻿using System.Data.Entity;
+using AsianLines.Infrastructure.Sql.Database;
+using AsianLines.Infrastructure.Sql.Migrations;
 
 namespace AsianLines.TestConsole
 {
@@ -6,6 +8,7 @@ namespace AsianLines.TestConsole
     {
         static void Main(string[] args)
         {
+            Database.SetInitializer(new MigrateDatabaseToLatestVersion<AdminDbContext, Configuration>());
             CreateDatabase();
         }
 
