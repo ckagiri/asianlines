@@ -108,6 +108,7 @@
     <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\thirdparty\libs\Microsoft.AspNet.Mvc.4.0.20710.0\lib\net40\System.Web.Mvc.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System.Web.Optimization, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -159,6 +160,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\ValidationActionFilter.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\Api\TeamsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
       <SubType>Code</SubType>
@@ -166,6 +168,78 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\css\application.css" />
+    <Content Include="Assets\css\bootstrap-responsive.css" />
+    <Content Include="Assets\css\bootstrap-responsive.min.css" />
+    <Content Include="Assets\css\bootstrap.css" />
+    <Content Include="Assets\css\bootstrap.min.css" />
+    <Content Include="Assets\css\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Assets\css\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Assets\css\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Assets\css\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Assets\css\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Assets\css\images\ui-bg_glass_75_ffffff_1x400.png" />
+    <Content Include="Assets\css\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Assets\css\images\ui-bg_inset-soft_95_fef1ec_1x100.png" />
+    <Content Include="Assets\css\images\ui-icons_222222_256x240.png" />
+    <Content Include="Assets\css\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Assets\css\images\ui-icons_454545_256x240.png" />
+    <Content Include="Assets\css\images\ui-icons_888888_256x240.png" />
+    <Content Include="Assets\css\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Assets\css\images\ui-icons_f6cf3b_256x240.png" />
+    <Content Include="Assets\css\jquery-ui-1.10.0.custom.css" />
+    <Content Include="Assets\css\spinner.css" />
+    <Content Include="Assets\img\glyphicons-halflings-white.png" />
+    <Content Include="Assets\img\glyphicons-halflings.png" />
+    <Content Include="Assets\js\main\app.js" />
+    <Content Include="Assets\js\main\apps\config\storage\localstorage.js" />
+    <Content Include="Assets\js\main\apps\header\header_app.js" />
+    <Content Include="Assets\js\main\apps\header\list\list_controller.js" />
+    <Content Include="Assets\js\main\apps\header\list\list_view.js" />
+    <Content Include="Assets\js\main\apps\teams\list\list_controller.js" />
+    <Content Include="Assets\js\main\apps\teams\list\list_view.js" />
+    <Content Include="Assets\js\main\apps\teams\teams_app.js" />
+    <Content Include="Assets\js\main\components\config\backbone\sync.js" />
+    <Content Include="Assets\js\main\components\config\javascript.js" />
+    <Content Include="Assets\js\main\components\config\jquery-ui.js" />
+    <Content Include="Assets\js\main\components\config\jquery.js" />
+    <Content Include="Assets\js\main\components\config\marionette\application.js" />
+    <Content Include="Assets\js\main\components\config\marionette\regions\dialogs.js" />
+    <Content Include="Assets\js\main\components\config\marionette\renderer.js" />
+    <Content Include="Assets\js\main\config\backbone\sync.js" />
+    <Content Include="Assets\js\main\config\javascript.js" />
+    <Content Include="Assets\js\main\config\jquery-ui.js" />
+    <Content Include="Assets\js\main\config\jquery.js" />
+    <Content Include="Assets\js\main\config\marionette\application.js" />
+    <Content Include="Assets\js\main\config\marionette\regions\dialogs.js" />
+    <Content Include="Assets\js\main\config\marionette\renderer.js" />
+    <Content Include="Assets\js\main\controllers\_base.js" />
+    <Content Include="Assets\js\main\entities\team.js" />
+    <Content Include="Assets\js\main\entities\_base\collection.js" />
+    <Content Include="Assets\js\main\entities\_base\model.js" />
+    <Content Include="Assets\js\main\entities\_base\_fetch.js" />
+    <Content Include="Assets\js\main\views\_base\collectionview.js" />
+    <Content Include="Assets\js\main\views\_base\compositeview.js" />
+    <Content Include="Assets\js\main\views\_base\itemview.js" />
+    <Content Include="Assets\js\main\views\_base\layout.js" />
+    <Content Include="Assets\js\main\views\_base\view.js" />
+    <Content Include="Assets\js\vendor\backbone.babysitter.js" />
+    <Content Include="Assets\js\vendor\backbone.js" />
+    <Content Include="Assets\js\vendor\backbone.localstorage.js" />
+    <Content Include="Assets\js\vendor\backbone.marionette.js" />
+    <Content Include="Assets\js\vendor\backbone.marionette.min.js" />
+    <Content Include="Assets\js\vendor\backbone.paginator.js" />
+    <Content Include="Assets\js\vendor\backbone.picky.js" />
+    <Content Include="Assets\js\vendor\backbone.syphon.js" />
+    <Content Include="Assets\js\vendor\backbone.wreqr.js" />
+    <Content Include="Assets\js\vendor\bootstrap.js" />
+    <Content Include="Assets\js\vendor\bootstrap.min.js" />
+    <Content Include="Assets\js\vendor\jquery-ui-1.10.3.js" />
+    <Content Include="Assets\js\vendor\jquery.js" />
+    <Content Include="Assets\js\vendor\json2.js" />
+    <Content Include="Assets\js\vendor\spin.jquery.js" />
+    <Content Include="Assets\js\vendor\spin.js" />
+    <Content Include="Assets\js\vendor\underscore.js" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\_references.js" />
@@ -179,8 +253,10 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Assets\js\main\apps\teams\edit\" />
+    <Folder Include="Assets\js\main\apps\teams\new\" />
+    <Folder Include="Assets\js\main\utils\" />
     <Folder Include="Content\" />
-    <Folder Include="Controllers\" />
     <Folder Include="Models\" />
     <Folder Include="Views\" />
   </ItemGroup>
@@ -196,6 +272,9 @@
       <Project>{29a30d12-59de-401e-9b07-4710d0351680}</Project>
       <Name>AsianLines.Infrastructure.Sql</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Index.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
