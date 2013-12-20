@@ -30,11 +30,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework">
-      <HintPath>..\..\..\packages\EntityFramework.6.0.2\lib\net45\EntityFramework.dll</HintPath>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\thirdparty\libs\EntityFramework.6.0.2\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
-    <Reference Include="EntityFramework.SqlServer">
-      <HintPath>..\..\..\packages\EntityFramework.6.0.2\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\thirdparty\libs\EntityFramework.6.0.2\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -47,24 +49,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Database\AdminDbContext.cs" />
-    <Compile Include="Migrations\201312191017359_InitialCreate.cs" />
-    <Compile Include="Migrations\201312191017359_InitialCreate.Designer.cs">
-      <DependentUpon>201312191017359_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201312191107590_RemoveCountryFromTeam.cs" />
-    <Compile Include="Migrations\201312191107590_RemoveCountryFromTeam.Designer.cs">
-      <DependentUpon>201312191107590_RemoveCountryFromTeam.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201312191109183_AddTagsToTeam.cs" />
-    <Compile Include="Migrations\201312191109183_AddTagsToTeam.Designer.cs">
-      <DependentUpon>201312191109183_AddTagsToTeam.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AsianLines.Core\AsianLines.Core.csproj">
@@ -73,15 +58,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201312191017359_InitialCreate.resx">
-      <DependentUpon>201312191017359_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201312191107590_RemoveCountryFromTeam.resx">
-      <DependentUpon>201312191107590_RemoveCountryFromTeam.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201312191109183_AddTagsToTeam.resx">
-      <DependentUpon>201312191109183_AddTagsToTeam.cs</DependentUpon>
-    </EmbeddedResource>
+    <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
