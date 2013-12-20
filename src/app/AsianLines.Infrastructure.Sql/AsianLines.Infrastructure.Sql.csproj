@@ -61,6 +61,10 @@
     <Compile Include="Migrations\201312200616255_AddTagsToTeam.Designer.cs">
       <DependentUpon>201312200616255_AddTagsToTeam.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201312201158468_Add_League_Season_Fixture_Tables.cs" />
+    <Compile Include="Migrations\201312201158468_Add_League_Season_Fixture_Tables.Designer.cs">
+      <DependentUpon>201312201158468_Add_League_Season_Fixture_Tables.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -83,6 +87,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201312200616255_AddTagsToTeam.resx">
       <DependentUpon>201312200616255_AddTagsToTeam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201312201158468_Add_League_Season_Fixture_Tables.resx">
+      <DependentUpon>201312201158468_Add_League_Season_Fixture_Tables.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
