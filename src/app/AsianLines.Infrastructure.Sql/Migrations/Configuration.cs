@@ -1,10 +1,10 @@
 using System.Collections.Generic;
 using AsianLines.Core.Model;
+using AsianLines.Infrastructure.Sql.Database;
 
 namespace AsianLines.Infrastructure.Sql.Migrations
 {
     using System;
-    using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
 
@@ -17,9 +17,83 @@ namespace AsianLines.Infrastructure.Sql.Migrations
             ContextKey = "AsianLines.Infrastructure.Sql.Database.AdminDbContext";
         }
 
-        protected override void Seed(Sql.Database.AdminDbContext context)
+        protected override void Seed(AdminDbContext context)
         {
-            # region Teams
+            var leagues = AddLeagues(context);
+            var seasons = AddSeasons(context, leagues);
+            var teams = AddTeams(context);
+
+            AddTeamsToSeason(context, leagues, seasons, teams);
+            AddFixturesToSeason(context, leagues, seasons, teams);
+        }
+
+        private List<League> AddLeagues(AdminDbContext context)
+        {
+            var leagues = new List<League>
+                              {
+                                  new League
+                                      {
+                                          Id = Guid.NewGuid(),
+                                          Name = "English Premier League",
+                                          Code = "EPL"
+                                      },
+                                  new League
+                                      {
+                                          Id = Guid.NewGuid(),
+                                          Name = "Tusker Premier League",
+                                          Code = "KPL"
+                                      }
+                              };
+
+            leagues.ForEach(l => context.Leagues.Add(l));
+            context.SaveChanges();
+
+            return leagues;
+        }
+
+        private List<Season> AddSeasons(AdminDbContext context, List<League> leagues)
+        {
+            var now = DateTime.Now;
+            var eplSeasons = new List<Season>
+                                 {
+                                     new Season
+                                         {
+                                             Id = Guid.NewGuid(),
+                                             LeagueId = leagues.First(l => l.Code == "EPL").Id,
+                                             StartDate = now.AddDays(-14),
+                                             EndDate = now.AddDays(91),
+                                             Name = "2013 - 2014",
+                                         },
+                                     new Season
+                                         {
+                                             Id = Guid.NewGuid(),
+                                             LeagueId = leagues.First(l => l.Code == "EPL").Id,
+                                             StartDate = now.AddMonths(-24),
+                                             EndDate = now.AddDays(-12),
+                                             Name = "2012 - 2013",
+                                         }
+                                 };
+            var kplSeasons = new List<Season>
+                                 {
+                                     new Season
+                                         {
+                                             Id = Guid.NewGuid(),
+                                             LeagueId = leagues.First(l => l.Code == "KPL").Id,
+                                             StartDate = now.AddDays(-14),
+                                             EndDate = now.AddDays(21),
+                                             Name = "2013 - 2014",
+                                         }
+                                 };
+
+            var seasons = eplSeasons.Concat(kplSeasons).ToList();
+            seasons.ForEach(s => context.Seasons.Add(s));
+            context.SaveChanges();
+
+            return seasons;
+        }
+
+        private List<Team> AddTeams(AdminDbContext context)
+        {
             var kplTeams = new List<Team>
                             {
                                 new Team
@@ -231,65 +305,12 @@ namespace AsianLines.Infrastructure.Sql.Migrations
             var teams = kplTeams.Concat(eplTeams).ToList();
             teams.ForEach(t => context.Teams.Add(t));
             context.SaveChanges();
-            #endregion
 
-            #region Leagues & Seasons
-            var leagues = new List<League>
-                              {
-                                  new League
-                                      {
-                                          Id = Guid.NewGuid(),
-                                          Name = "English Premier League",
-                                          Code = "EPL"
-                                      },
-                                  new League
-                                      {
-                                          Id = Guid.NewGuid(),
-                                          Name = "Tusker Premier League",
-                                          Code = "KPL"
-                                      }
-                              };
+            return teams;
+        }
 
-            leagues.ForEach(l => context.Leagues.Add(l));
-
-            var now = DateTime.Now;
-            var eplSeasons = new List<Season>
-                                 {
-                                     new Season
-                                         {
-                                             Id = Guid.NewGuid(),
-                                             LeagueId = leagues.First(l => l.Code == "EPL").Id,
-                                             StartDate = now.AddDays(-14),
-                                             EndDate = now.AddDays(91),
-                                             Name = "2013 - 2014",
-                                         },
-                                     new Season
-                                         {
-                                             Id = Guid.NewGuid(),
-                                             LeagueId = leagues.First(l => l.Code == "EPL").Id,
-                                             StartDate = now.AddMonths(-24),
-                                             EndDate = now.AddDays(-12),
-                                             Name = "2012 - 2013",
-                                         }
-                                 };
-            var kplSeasons = new List<Season>
-                                 {
-                                     new Season
-                                         {
-                                             Id = Guid.NewGuid(),
-                                             LeagueId = leagues.First(l => l.Code == "KPL").Id,
-                                             StartDate = now.AddDays(-14),
-                                             EndDate = now.AddDays(21),
-                                             Name = "2013 - 2014",
-                                         }
-                                 };
-
-            var seasons = eplSeasons.Concat(kplSeasons).ToList();
-            seasons.ForEach(s => context.Seasons.Add(s));
-            context.SaveChanges();
-            #endregion
-
-            #region Season-Teams
+        private void AddTeamsToSeason(AdminDbContext context, List<League> leagues, List<Season> seasons, List<Team> teams)
+        {
             var epl = leagues.First(l => l.Code == "EPL").Id;
             var kpl = leagues.First(l => l.Code == "KPL").Id;
             var eplSeason = context.Seasons.First(s => s.LeagueId == epl && s.Name == "2013 - 2014");
@@ -297,12 +318,16 @@ namespace AsianLines.Infrastructure.Sql.Migrations
 
             var teamsKpl = teams.Take(5).ToList();
             var teamsEpl = teams.Skip(5).ToList();
-            
+
             teamsEpl.ForEach(t => eplSeason.Teams.Add(t));
             teamsKpl.ForEach(t => kplSeason.Teams.Add(t));
 
             context.SaveChanges();
-            #endregion
+        }
+
+        private void AddFixturesToSeason(AdminDbContext context, List<League> leagues, List<Season> seasons, List<Team> teams)
+        {
+
         }
     }
 }
