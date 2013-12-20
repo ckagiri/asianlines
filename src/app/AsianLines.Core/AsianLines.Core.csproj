@@ -31,6 +31,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -39,6 +40,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\Fixture.cs" />
+    <Compile Include="Model\League.cs" />
+    <Compile Include="Model\MatchOdds.cs" />
+    <Compile Include="Model\Season.cs" />
+    <Compile Include="Model\SeasonTeam.cs" />
     <Compile Include="Model\Team.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
