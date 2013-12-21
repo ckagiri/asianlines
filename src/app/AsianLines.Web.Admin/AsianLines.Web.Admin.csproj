@@ -203,9 +203,6 @@
     <Content Include="Assets\js\main\apps\teams\list\list_view.js" />
     <Content Include="Assets\js\main\apps\teams\teams_app.js" />
     <Content Include="Assets\js\main\components\config\backbone\sync.js" />
-    <Content Include="Assets\js\main\components\config\javascript.js" />
-    <Content Include="Assets\js\main\components\config\jquery-ui.js" />
-    <Content Include="Assets\js\main\components\config\jquery.js" />
     <Content Include="Assets\js\main\components\config\marionette\application.js" />
     <Content Include="Assets\js\main\components\config\marionette\regions\dialogs.js" />
     <Content Include="Assets\js\main\components\config\marionette\renderer.js" />
