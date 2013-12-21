@@ -206,6 +206,8 @@
     <Content Include="Assets\js\main\components\config\marionette\application.js" />
     <Content Include="Assets\js\main\components\config\marionette\regions\dialogs.js" />
     <Content Include="Assets\js\main\components\config\marionette\renderer.js" />
+    <Content Include="Assets\js\main\components\loading\loading_controller.js" />
+    <Content Include="Assets\js\main\components\loading\loading_view.js" />
     <Content Include="Assets\js\main\config\backbone\sync.js" />
     <Content Include="Assets\js\main\config\javascript.js" />
     <Content Include="Assets\js\main\config\jquery-ui.js" />
