@@ -8,10 +8,10 @@ namespace AsianLines.Web.Admin.Controllers.Api
 {
     public class TeamsController : ApiController
     {
-        public IEnumerable<Team> Get()
+        public IQueryable<Team> Get()
         {
             var context = new AdminDbContext();
-            var teams = context.Teams.ToList();
+            var teams = context.Teams;
             return teams;
         }
     }
