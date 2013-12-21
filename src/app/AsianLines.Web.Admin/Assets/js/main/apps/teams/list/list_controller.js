@@ -6,14 +6,19 @@
             App.execute("set:header:active", "teams");
             App.execute("when:fetched", [teams], function () {
                 var x = teams;
-                self.layout = self.getLayoutView();
-                self.listenTo(self.layout, "show", function () {
-                    self.panelRegion();
-                    self.teamsRegion(teams);
-                    self.paginationRegion(teams);
-                });
-
-                self.show(self.layout);
+                teams.reset(teams.sortBy("name"));
+            });
+            this.layout = this.getLayoutView();
+            this.listenTo(this.layout, "show", function () {
+                self.panelRegion();
+                self.teamsRegion(teams);
+                self.paginationRegion(teams);
+            });
+            this.show(this.layout, {
+                loading: {
+                    entities: teams,
+                    debug: false
+                }
             });
         },
         onClose: function () {
