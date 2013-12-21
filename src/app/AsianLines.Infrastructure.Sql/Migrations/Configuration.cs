@@ -29,9 +29,9 @@ namespace AsianLines.Infrastructure.Sql.Migrations
             AddFixturesToSeason(context, leagues, seasons, teams);
         }
 
-        private List<League> AddLeagues(AdminDbContext context)
+        private League[] AddLeagues(AdminDbContext context)
         {
-            var leagues = new List<League>
+            var leagues = new []
                               {
                                   new League
                                       {
@@ -47,16 +47,15 @@ namespace AsianLines.Infrastructure.Sql.Migrations
                                       }
                               };
 
-            leagues.ForEach(l => context.Leagues.Add(l));
-            context.SaveChanges();
+            context.Leagues.AddOrUpdate(p => p.Code, leagues);
 
             return leagues;
         }
 
-        private List<Season> AddSeasons(AdminDbContext context, List<League> leagues)
+        private Season[] AddSeasons(AdminDbContext context, League[] leagues)
         {
             var now = DateTime.Now;
-            var eplSeasons = new List<Season>
+            var eplSeasons = new[]
                                  {
                                      new Season
                                          {
@@ -75,7 +74,7 @@ namespace AsianLines.Infrastructure.Sql.Migrations
                                              Name = "2012 - 2013",
                                          }
                                  };
-            var kplSeasons = new List<Season>
+            var kplSeasons = new[]
                                  {
                                      new Season
                                          {
@@ -87,60 +86,59 @@ namespace AsianLines.Infrastructure.Sql.Migrations
                                          }
                                  };
 
-            var seasons = eplSeasons.Concat(kplSeasons).ToList();
-            seasons.ForEach(s => context.Seasons.Add(s));
-            context.SaveChanges();
+            var seasons = eplSeasons.Concat(kplSeasons).ToArray();
+            context.Seasons.AddOrUpdate(p => new { p.LeagueId, p.Name}, seasons);
 
             return seasons;
         }
 
-        private List<Team> AddTeams(AdminDbContext context)
+        private Team[] AddTeams(AdminDbContext context)
         {
-            var kplTeams = new List<Team>
-                            {
-                                new Team
-                                    {
-                                        Id = Guid.NewGuid(),
-                                        Name = "Gor Mahia",
-                                        Code = "GOR",
-                                        HomeGround = "City Stadium",
-                                        Tags = "TPL|Tusker Premier League|Kenya|East Africa"
-                                    },
-                                new Team
-                                    {
-                                        Id = Guid.NewGuid(),
-                                        Name = "AFC Leopards",
-                                        Code = "AFC",
-                                        HomeGround = "Chui Stadium",
-                                        Tags = "TPL|Tusker Premier League|Kenya|East Africa"
-                                    },
-                                new Team
-                                    {
-                                        Id = Guid.NewGuid(),
-                                        Name = "Tusker",
-                                        Code = "TUSK",
-                                        HomeGround = "The Breweries",
-                                        Tags = "TPL|Tusker Premier League|Kenya|East Africa"
-                                    },
-                                new Team
-                                    {
-                                        Id = Guid.NewGuid(),
-                                        Name = "Sofapaka",
-                                        Code = "SOFP",
-                                        HomeGround = "Sofapaka Stadium",
-                                        Tags = "TPL|Tusker Premier League|Kenya|East Africa"
-                                    },
-                                new Team
-                                    {
-                                        Id = Guid.NewGuid(),
-                                        Name = "Ulinzi Stars",
-                                        Code = "ULNZ",
-                                        HomeGround = "Ulinzi Grounds",
-                                        Tags = "TPL|Tusker Premier League|Kenya|East Africa"
-                                    }
-                            };
+            var kplTeams = new[]
+                               {
+                                   new Team
+                                       {
+                                           Id = Guid.NewGuid(),
+                                           Name = "Gor Mahia",
+                                           Code = "GOR",
+                                           HomeGround = "City Stadium",
+                                           Tags = "TPL|Tusker Premier League|Kenya|East Africa"
+                                       },
+                                   new Team
+                                       {
+                                           Id = Guid.NewGuid(),
+                                           Name = "AFC Leopards",
+                                           Code = "AFC",
+                                           HomeGround = "Chui Stadium",
+                                           Tags = "TPL|Tusker Premier League|Kenya|East Africa"
+                                       },
+                                   new Team
+                                       {
+                                           Id = Guid.NewGuid(),
+                                           Name = "Tusker",
+                                           Code = "TUSK",
+                                           HomeGround = "The Breweries",
+                                           Tags = "TPL|Tusker Premier League|Kenya|East Africa"
+                                       },
+                                   new Team
+                                       {
+                                           Id = Guid.NewGuid(),
+                                           Name = "Sofapaka",
+                                           Code = "SOFP",
+                                           HomeGround = "Sofapaka Stadium",
+                                           Tags = "TPL|Tusker Premier League|Kenya|East Africa"
+                                       },
+                                   new Team
+                                       {
+                                           Id = Guid.NewGuid(),
+                                           Name = "Ulinzi Stars",
+                                           Code = "ULNZ",
+                                           HomeGround = "Ulinzi Grounds",
+                                           Tags = "TPL|Tusker Premier League|Kenya|East Africa"
+                                       }
+                               };
 
-            var eplTeams = new List<Team>
+            var eplTeams = new[]
                                {
                                    new Team
                                        {
@@ -304,19 +302,18 @@ namespace AsianLines.Infrastructure.Sql.Migrations
                                        },
                                };
 
-            var teams = kplTeams.Concat(eplTeams).ToList();
-            teams.ForEach(t => context.Teams.Add(t));
-            context.SaveChanges();
+            var teams = kplTeams.Concat(eplTeams).ToArray();
+            context.Teams.AddOrUpdate(p => p.Code, teams);
 
             return teams;
         }
 
-        private void AddTeamsToSeason(AdminDbContext context, List<League> leagues, List<Season> seasons, List<Team> teams)
+        private void AddTeamsToSeason(AdminDbContext context, League[] leagues, Season[] seasons, Team[] teams)
         {
             var epl = leagues.First(l => l.Code == "EPL").Id;
             var kpl = leagues.First(l => l.Code == "KPL").Id;
-            var eplSeason = context.Seasons.First(s => s.LeagueId == epl && s.Name == "2013 - 2014");
-            var kplSeason = context.Seasons.First(s => s.LeagueId == kpl && s.Name == "2013 - 2014");
+            var eplSeason = seasons.First(s => s.LeagueId == epl && s.Name == "2013 - 2014");
+            var kplSeason = seasons.First(s => s.LeagueId == kpl && s.Name == "2013 - 2014");
 
             var teamsKpl = teams.Take(5).ToList();
             var teamsEpl = teams.Skip(5).ToList();
@@ -324,14 +321,14 @@ namespace AsianLines.Infrastructure.Sql.Migrations
             teamsEpl.ForEach(t => eplSeason.Teams.Add(t));
             teamsKpl.ForEach(t => kplSeason.Teams.Add(t));
 
-            context.SaveChanges();
+            context.Seasons.AddOrUpdate(p => new {p.LeagueId, p.Name}, new[] {kplSeason, eplSeason});
         }
 
-        private void AddFixturesToSeason(AdminDbContext context, List<League> leagues, List<Season> seasons, List<Team> teams)
+        private void AddFixturesToSeason(AdminDbContext context, League[] leagues, Season[] seasons, Team[] teams)
         {
             var now = DateTime.Now;
             var epl = leagues.First(l => l.Code == "EPL").Id;
-            var eplSeason = context.Seasons.First(s => s.LeagueId == epl && s.Name == "2013 - 2014");
+            var eplSeason = seasons.First(s => s.LeagueId == epl && s.Name == "2013 - 2014");
             var eplTeams = teams.Skip(5).ToList();
             var day1 = new MonToSunWeek().Start().AddDays(-4).AddHours(-3);
             var day2 = new MonToSunWeek().Start().AddDays(-4);
@@ -339,7 +336,7 @@ namespace AsianLines.Infrastructure.Sql.Migrations
             var day4 = now.AddHours(15);
             var day5 = now.AddDays(7);
             var day6 = now.AddDays(7).AddHours(3);
-            var eplFixtures = new List<Fixture>
+            var eplFixtures = new[]
                                   {
                                       new Fixture
                                           {
@@ -512,8 +509,7 @@ namespace AsianLines.Infrastructure.Sql.Migrations
                                                          }
                                           }
                                   };
-            eplFixtures.ForEach(f => context.Fixtures.Add(f));
-            context.SaveChanges();
+            context.Fixtures.AddOrUpdate(p => new {p.SeasonId, p.HomeTeamId, p.AwayTeamId}, eplFixtures);
         }
     }
 }
