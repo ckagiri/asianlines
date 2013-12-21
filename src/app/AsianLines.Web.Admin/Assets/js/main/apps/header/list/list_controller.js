@@ -1,34 +1,28 @@
 ﻿Main.module('HeaderApp.List', function (List, App, Backbone, Marionette, $, _) {
-    List.Controller = {
-        listHeader: function () {
-            var links = App.request("header:entities");
-            var headers = new List.Headers({ collection: links });
-
-            headers.on("brand:clicked", function () {
-                App.trigger("teams:list");
-            });
-            headers.on("itemview:navigate", function (childView, model) {
+    List.Controller = App.Controllers.Base.extend({
+        initialize: function () {
+            var headersView = this.getHeadersView();
+            this.listenTo(headersView, "brand:clicked", function () {
+                            App.trigger("teams:list");
+                        });
+            this.listenTo(headersView, "childview:navigate", function(childView, model) {
                 var url = model.get('url');
                 switch (url) {
-                    case "teams":
-                        App.trigger("teams:list");
-                        break;
-                    case "about":
-                        App.trigger("about:show");
-                        break;
-                    default:
-                        throw "No such route: " + url;
+                case "teams":
+                    App.trigger("teams:list");
+                    break;
+                case "about":
+                    App.trigger("about:show");
+                    break;
+                default:
+                    throw "No such route: " + url;
                 }
             });
-            App.headerRegion.show(headers);
+            this.show(headersView);
         },
-        setActiveHeader: function (headerUrl) {
+        getHeadersView: function () {
             var links = App.request("header:entities");
-            var headerToSelect = links.find(function (header) {
-                return header.get('url') === headerUrl;
-            });
-            headerToSelect.select();
-            links.trigger("reset");
+            return new List.Headers({collection: links});
         }
-    };
+    });
 });

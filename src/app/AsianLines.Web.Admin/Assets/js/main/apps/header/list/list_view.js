@@ -1,5 +1,5 @@
 ﻿Main.module('HeaderApp.List', function (List, App, Backbone, Marionette, $, _) {
-    List.Header = Marionette.ItemView.extend({
+    List.Header = App.Views.ItemView.extend({
         template: "#header-link",
         tagName: "li",
 
@@ -19,7 +19,7 @@
         }
     });
 
-    List.Headers = Marionette.CompositeView.extend({
+    List.Headers = App.Views.CompositeView.extend({
         template: "#header-template",
         className: "navbar navbar-inverse navbar-fixed-top",
         itemView: List.Header,

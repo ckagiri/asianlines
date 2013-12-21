@@ -1,20 +1,19 @@
 ﻿Main.module('AboutApp', function (AboutApp, App, Backbone, Marionette, $, _) {
     AboutApp.Router = Marionette.AppRouter.extend({
         appRoutes: {
-            "about" : "showAbout"
+            "about" : "show"
         }
     });
 
     var API = {
-        showAbout: function() {
-            AboutApp.Show.Controller.showAbout();
-            App.HeaderApp.List.Controller.setActiveHeader("about");
+        show: function () {
+            return new AboutApp.Show.Controller();
         }
     };
 
     App.on("about:show", function() {
         App.navigate("about");
-        API.showAbout();
+        API.show();
     });
 
     App.addInitializer(function() {

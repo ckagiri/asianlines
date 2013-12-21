@@ -3,6 +3,7 @@
         initialize: function () {
             var self = this,
                 teams = App.request("team:entities");
+            App.execute("set:header:active", "teams");
             App.execute("when:fetched", [teams], function () {
                 var x = teams;
                 self.layout = self.getLayoutView();
