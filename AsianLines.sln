@@ -19,6 +19,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkerRoleMessageProcessor"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsianLines.Web.Public", "src\app\AsianLines.Web.Public\AsianLines.Web.Public.csproj", "{74882C1A-5AB5-4249-8C10-268457D1F34B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsianLines.Infrastructure.Azure", "src\app\AsianLines.Infrastructure.Azure\AsianLines.Infrastructure.Azure.csproj", "{FAB86ABF-89FE-4756-BDB6-61CF89E0F080}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsianLines.Infrastructure.Azure.Tests", "src\test\AsianLines.Infrastructure.Azure.Tests\AsianLines.Infrastructure.Azure.Tests.csproj", "{D9BBD613-8268-465D-B52E-E606BE844FE6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -61,6 +65,14 @@ Global
 		{74882C1A-5AB5-4249-8C10-268457D1F34B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{74882C1A-5AB5-4249-8C10-268457D1F34B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{74882C1A-5AB5-4249-8C10-268457D1F34B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FAB86ABF-89FE-4756-BDB6-61CF89E0F080}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FAB86ABF-89FE-4756-BDB6-61CF89E0F080}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FAB86ABF-89FE-4756-BDB6-61CF89E0F080}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FAB86ABF-89FE-4756-BDB6-61CF89E0F080}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9BBD613-8268-465D-B52E-E606BE844FE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9BBD613-8268-465D-B52E-E606BE844FE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9BBD613-8268-465D-B52E-E606BE844FE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9BBD613-8268-465D-B52E-E606BE844FE6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
