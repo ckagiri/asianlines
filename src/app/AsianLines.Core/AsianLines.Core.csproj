@@ -60,6 +60,17 @@
     <Compile Include="Events\IEventHandlerRegistry.cs" />
     <Compile Include="Events\IVersionedEvent.cs" />
     <Compile Include="Events\VersionedEvent.cs" />
+    <Compile Include="Messaging\CommandBusExtensions.cs" />
+    <Compile Include="Messaging\Envelope.cs" />
+    <Compile Include="Messaging\EventBusExtensions.cs" />
+    <Compile Include="Messaging\EventDispatcher.cs" />
+    <Compile Include="Messaging\ICommandBus.cs" />
+    <Compile Include="Messaging\IEventBus.cs" />
+    <Compile Include="Messaging\IEventPublisher.cs" />
+    <Compile Include="Messaging\IMessageSessionProvider.cs" />
+    <Compile Include="Messaging\IMetadataProvider.cs" />
+    <Compile Include="Messaging\StandardMetadata.cs" />
+    <Compile Include="Messaging\StandardMetadataProvider.cs" />
     <Compile Include="Model\Fixture.cs" />
     <Compile Include="Model\League.cs" />
     <Compile Include="Model\MatchOdds.cs" />
