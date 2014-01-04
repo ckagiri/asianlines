@@ -43,6 +43,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Commands\ICommand.cs" />
+    <Compile Include="Commands\ICommandHandler.cs" />
+    <Compile Include="Commands\ICommandHandlerRegistry.cs" />
     <Compile Include="DataAccess\IContext.cs" />
     <Compile Include="DataAccess\IFixtureRepository.cs" />
     <Compile Include="DataAccess\ILeagueRepository.cs" />
@@ -50,6 +53,13 @@
     <Compile Include="DataAccess\ISeasonRepository.cs" />
     <Compile Include="DataAccess\ITeamRepository.cs" />
     <Compile Include="DataAccess\IUnitOfWork.cs" />
+    <Compile Include="DomainBase\IAggregateRoot.cs" />
+    <Compile Include="DomainBase\IEntity.cs" />
+    <Compile Include="Events\IEvent.cs" />
+    <Compile Include="Events\IEventHandler.cs" />
+    <Compile Include="Events\IEventHandlerRegistry.cs" />
+    <Compile Include="Events\IVersionedEvent.cs" />
+    <Compile Include="Events\VersionedEvent.cs" />
     <Compile Include="Model\Fixture.cs" />
     <Compile Include="Model\League.cs" />
     <Compile Include="Model\MatchOdds.cs" />
