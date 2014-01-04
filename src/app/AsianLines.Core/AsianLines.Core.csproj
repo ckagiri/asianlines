@@ -43,6 +43,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataAccess\IContext.cs" />
+    <Compile Include="DataAccess\IFixtureRepository.cs" />
+    <Compile Include="DataAccess\ILeagueRepository.cs" />
+    <Compile Include="DataAccess\IRepository.cs" />
+    <Compile Include="DataAccess\ISeasonRepository.cs" />
+    <Compile Include="DataAccess\ITeamRepository.cs" />
+    <Compile Include="DataAccess\IUnitOfWork.cs" />
     <Compile Include="Model\Fixture.cs" />
     <Compile Include="Model\League.cs" />
     <Compile Include="Model\MatchOdds.cs" />
