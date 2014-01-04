@@ -1,27 +1,27 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsianLines.Core", "src\app\AsianLines.Core\AsianLines.Core.csproj", "{326E4321-92A7-4B5A-AB53-D8ABB9EA2602}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ligi.Core", "src\app\AsianLines.Core\Ligi.Core.csproj", "{326E4321-92A7-4B5A-AB53-D8ABB9EA2602}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsianLines.Core.Tests", "src\test\AsianLines.Core.Tests\AsianLines.Core.Tests.csproj", "{5F496366-D4B1-4B7C-944A-0E8F3464257E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ligi.Core.Tests", "src\test\AsianLines.Core.Tests\Ligi.Core.Tests.csproj", "{5F496366-D4B1-4B7C-944A-0E8F3464257E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsianLines.Infrastructure.Sql", "src\app\AsianLines.Infrastructure.Sql\AsianLines.Infrastructure.Sql.csproj", "{29A30D12-59DE-401E-9B07-4710D0351680}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ligi.Infrastructure.Sql", "src\app\AsianLines.Infrastructure.Sql\Ligi.Infrastructure.Sql.csproj", "{29A30D12-59DE-401E-9B07-4710D0351680}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsianLines.Infrastructure.Sql.Tests", "src\test\AsianLines.Infrastructure.Sql.Tests\AsianLines.Infrastructure.Sql.Tests.csproj", "{2F14F400-666C-46D4-916E-3C646613D5A3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ligi.Infrastructure.Sql.Tests", "src\test\AsianLines.Infrastructure.Sql.Tests\Ligi.Infrastructure.Sql.Tests.csproj", "{2F14F400-666C-46D4-916E-3C646613D5A3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsianLines.TestConsole", "src\app\AsianLines.TestConsole\AsianLines.TestConsole.csproj", "{BBCC88FA-3CF6-4036-B8FC-5E1E6D45E908}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ligi.TestConsole", "src\app\AsianLines.TestConsole\Ligi.TestConsole.csproj", "{BBCC88FA-3CF6-4036-B8FC-5E1E6D45E908}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsianLines.Web.Admin", "src\app\AsianLines.Web.Admin\AsianLines.Web.Admin.csproj", "{B78E66ED-C5D0-474B-B2E0-E435D1B693EC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ligi.Web.Admin", "src\app\AsianLines.Web.Admin\Ligi.Web.Admin.csproj", "{B78E66ED-C5D0-474B-B2E0-E435D1B693EC}"
 EndProject
-Project("{CC5FD16D-436D-48AD-A40C-5A424C6E3E79}") = "AsianLines.Azure", "src\app\AsianLines.Azure\AsianLines.Azure.ccproj", "{AC149A41-12C9-4B96-85F6-AD5FF2AB3AA7}"
+Project("{CC5FD16D-436D-48AD-A40C-5A424C6E3E79}") = "Ligi.Azure", "src\app\AsianLines.Azure\Ligi.Azure.ccproj", "{AC149A41-12C9-4B96-85F6-AD5FF2AB3AA7}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkerRoleMessageProcessor", "src\app\WorkerRoleMessageProcessor\WorkerRoleMessageProcessor.csproj", "{047F7409-40C1-41EE-905B-7FB441122FE5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsianLines.Web.Public", "src\app\AsianLines.Web.Public\AsianLines.Web.Public.csproj", "{74882C1A-5AB5-4249-8C10-268457D1F34B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ligi.Web.Public", "src\app\AsianLines.Web.Public\Ligi.Web.Public.csproj", "{74882C1A-5AB5-4249-8C10-268457D1F34B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsianLines.Infrastructure.Azure", "src\app\AsianLines.Infrastructure.Azure\AsianLines.Infrastructure.Azure.csproj", "{FAB86ABF-89FE-4756-BDB6-61CF89E0F080}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ligi.Infrastructure.Azure", "src\app\AsianLines.Infrastructure.Azure\Ligi.Infrastructure.Azure.csproj", "{FAB86ABF-89FE-4756-BDB6-61CF89E0F080}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsianLines.Infrastructure.Azure.Tests", "src\test\AsianLines.Infrastructure.Azure.Tests\AsianLines.Infrastructure.Azure.Tests.csproj", "{D9BBD613-8268-465D-B52E-E606BE844FE6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ligi.Infrastructure.Azure.Tests", "src\test\AsianLines.Infrastructure.Azure.Tests\Ligi.Infrastructure.Azure.Tests.csproj", "{D9BBD613-8268-465D-B52E-E606BE844FE6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

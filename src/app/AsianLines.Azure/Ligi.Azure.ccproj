@@ -11,7 +11,7 @@
     <RootNamespace>AsianLines.Azure</RootNamespace>
     <AssemblyName>AsianLines.Azure</AssemblyName>
     <StartDevelopmentStorage>True</StartDevelopmentStorage>
-    <Name>AsianLines.Azure</Name>
+    <Name>Ligi.Azure</Name>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -37,20 +37,20 @@
     <ServiceConfiguration Include="ServiceConfiguration.Cloud.cscfg" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\AsianLines.Web.Admin\AsianLines.Web.Admin.csproj">
-      <Name>AsianLines.Web.Admin</Name>
+    <ProjectReference Include="..\AsianLines.Web.Admin\Ligi.Web.Admin.csproj">
+      <Name>Ligi.Web.Admin</Name>
       <Project>{b78e66ed-c5d0-474b-b2e0-e435d1b693ec}</Project>
       <Private>True</Private>
       <RoleType>Web</RoleType>
-      <RoleName>AsianLines.Web.Admin</RoleName>
+      <RoleName>Ligi.Web.Admin</RoleName>
       <UpdateDiagnosticsConnectionStringOnPublish>True</UpdateDiagnosticsConnectionStringOnPublish>
     </ProjectReference>
-    <ProjectReference Include="..\AsianLines.Web.Public\AsianLines.Web.Public.csproj">
-      <Name>AsianLines.Web.Public</Name>
+    <ProjectReference Include="..\AsianLines.Web.Public\Ligi.Web.Public.csproj">
+      <Name>Ligi.Web.Public</Name>
       <Project>{74882c1a-5ab5-4249-8c10-268457d1f34b}</Project>
       <Private>True</Private>
       <RoleType>Web</RoleType>
-      <RoleName>AsianLines.Web.Public</RoleName>
+      <RoleName>Ligi.Web.Public</RoleName>
       <UpdateDiagnosticsConnectionStringOnPublish>True</UpdateDiagnosticsConnectionStringOnPublish>
     </ProjectReference>
     <ProjectReference Include="..\WorkerRoleMessageProcessor\WorkerRoleMessageProcessor.csproj">

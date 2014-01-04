@@ -69,9 +69,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\AsianLines.Core\AsianLines.Core.csproj">
+    <ProjectReference Include="..\AsianLines.Core\Ligi.Core.csproj">
       <Project>{326E4321-92A7-4B5A-AB53-D8ABB9EA2602}</Project>
-      <Name>AsianLines.Core</Name>
+      <Name>Ligi.Core</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

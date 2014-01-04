@@ -264,13 +264,13 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\AsianLines.Core\AsianLines.Core.csproj">
+    <ProjectReference Include="..\AsianLines.Core\Ligi.Core.csproj">
       <Project>{326e4321-92a7-4b5a-ab53-d8abb9ea2602}</Project>
-      <Name>AsianLines.Core</Name>
+      <Name>Ligi.Core</Name>
     </ProjectReference>
-    <ProjectReference Include="..\AsianLines.Infrastructure.Sql\AsianLines.Infrastructure.Sql.csproj">
+    <ProjectReference Include="..\AsianLines.Infrastructure.Sql\Ligi.Infrastructure.Sql.csproj">
       <Project>{29a30d12-59de-401e-9b07-4710d0351680}</Project>
-      <Name>AsianLines.Infrastructure.Sql</Name>
+      <Name>Ligi.Infrastructure.Sql</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

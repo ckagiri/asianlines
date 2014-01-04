@@ -53,9 +53,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\AsianLines.Infrastructure.Sql\AsianLines.Infrastructure.Sql.csproj">
+    <ProjectReference Include="..\AsianLines.Infrastructure.Sql\Ligi.Infrastructure.Sql.csproj">
       <Project>{29A30D12-59DE-401E-9B07-4710D0351680}</Project>
-      <Name>AsianLines.Infrastructure.Sql</Name>
+      <Name>Ligi.Infrastructure.Sql</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

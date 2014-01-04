@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ServiceDefinition name="AsianLines.Azure" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceDefinition" schemaVersion="2012-10.1.8">
-  <WebRole name="AsianLines.Web.Admin" vmsize="Small">
+  <WebRole name="Ligi.Web.Admin" vmsize="Small">
     <Sites>
       <Site name="Web">
         <Bindings>
@@ -20,7 +20,7 @@
       <Import moduleName="Diagnostics" />
     </Imports>
   </WorkerRole>
-  <WebRole name="AsianLines.Web.Public" vmsize="Small">
+  <WebRole name="Ligi.Web.Public" vmsize="Small">
     <Sites>
       <Site name="Web">
         <Bindings>
