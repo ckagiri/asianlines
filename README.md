@@ -11,5 +11,4 @@ My exploration into the world of:
 - REST
 - Html5, CSS3, Js
 - Frontend Javascript architecture - Backbone marionette
-- Testing
- 
+
