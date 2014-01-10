@@ -40,7 +40,7 @@
     </Reference>
     <Reference Include="Itenso.TimePeriod, Version=1.7.2.0, Culture=neutral, PublicKeyToken=d7f23b760ed5c748, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\packages\TimePeriodLibrary.NET.1.7.2\lib\net35\Desktop.Release\Itenso.TimePeriod.dll</HintPath>
+      <HintPath>..\..\..\thirdparty\libs\TimePeriodLibrary.NET.1.4.11\lib\sl40\Silverlight.Release\Itenso.TimePeriod.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.AspNet.SignalR.Client">
       <HintPath>..\..\..\thirdparty\libs\Microsoft.AspNet.SignalR.Client.2.0.1\lib\net45\Microsoft.AspNet.SignalR.Client.dll</HintPath>
@@ -80,6 +80,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -104,6 +105,10 @@
     <Compile Include="Migrations\201312201158468_Add_League_Season_Fixture_Tables.cs" />
     <Compile Include="Migrations\201312201158468_Add_League_Season_Fixture_Tables.Designer.cs">
       <DependentUpon>201312201158468_Add_League_Season_Fixture_Tables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201401101243093_AddedHomeAndAwayTeamNavProperties.cs" />
+    <Compile Include="Migrations\201401101243093_AddedHomeAndAwayTeamNavProperties.Designer.cs">
+      <DependentUpon>201401101243093_AddedHomeAndAwayTeamNavProperties.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -130,6 +135,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201312201158468_Add_League_Season_Fixture_Tables.resx">
       <DependentUpon>201312201158468_Add_League_Season_Fixture_Tables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201401101243093_AddedHomeAndAwayTeamNavProperties.resx">
+      <DependentUpon>201401101243093_AddedHomeAndAwayTeamNavProperties.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
