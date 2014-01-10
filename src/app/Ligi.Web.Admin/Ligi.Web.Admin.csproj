@@ -196,6 +196,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\ValidationActionFilter.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Config.cs" />
     <Compile Include="Controllers\Api\TeamsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
