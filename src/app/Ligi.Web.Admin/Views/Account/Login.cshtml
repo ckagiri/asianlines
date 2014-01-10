@@ -1,0 +1,49 @@
+﻿@model Ligi.Web.Admin.Models.LoginModel
+
+@{
+    ViewBag.Title = "Log in";
+}
+
+<h2>Login</h2>
+<p class="lead well well-small">@Html.ActionLink("Register", "Register") if you don't have an account.</p>
+<section id="loginForm">
+
+@using (Html.BeginForm(new { ReturnUrl = ViewBag.ReturnUrl })) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="span2">@Html.LabelFor(m => m.UserName)</div>
+            <div class="span8">
+                @Html.TextBoxFor(m => m.UserName)
+                @Html.ValidationMessageFor(m => m.UserName)
+            </div>
+        </div>
+        <div class="row-fluid">
+            <div class="span2">@Html.LabelFor(m => m.Password)</div>
+            <div class="span8">
+                @Html.PasswordFor(m => m.Password)
+                @Html.ValidationMessageFor(m => m.Password)
+            </div>
+        </div>
+        <div class="row-fluid">
+            <div class="span2"></div>
+            <div class="span8">
+                @Html.CheckBoxFor(m => m.RememberMe)
+                @Html.LabelFor(m => m.RememberMe, new { @class = "checkbox" })
+            </div>
+        </div>
+        <div class="row-fluid">
+            <div class="span2"></div>
+            <div class="span8">
+                <input class="btn btn-large" type="submit" value="Log in" />
+            </div>
+        </div>
+    </div>
+}
+</section>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
