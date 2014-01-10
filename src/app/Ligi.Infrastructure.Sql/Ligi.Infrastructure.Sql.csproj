@@ -89,6 +89,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AspnetSimpleMembership\Configuration\MembershipConfiguration.cs" />
+    <Compile Include="AspnetSimpleMembership\Configuration\OAuthMembershipConfiguration.cs" />
+    <Compile Include="AspnetSimpleMembership\Configuration\RoleConfiguration.cs" />
+    <Compile Include="AspnetSimpleMembership\Configuration\UserConfiguration.cs" />
+    <Compile Include="AspnetSimpleMembership\Membership.cs" />
+    <Compile Include="AspnetSimpleMembership\OAuthMembership.cs" />
+    <Compile Include="AspnetSimpleMembership\Role.cs" />
+    <Compile Include="AspnetSimpleMembership\User.cs" />
     <Compile Include="Database\AdminDbContext.cs" />
     <Compile Include="Migrations\201312200606076_InitialCreate.cs" />
     <Compile Include="Migrations\201312200606076_InitialCreate.Designer.cs">
@@ -109,6 +117,10 @@
     <Compile Include="Migrations\201401101243093_AddedHomeAndAwayTeamNavProperties.cs" />
     <Compile Include="Migrations\201401101243093_AddedHomeAndAwayTeamNavProperties.Designer.cs">
       <DependentUpon>201401101243093_AddedHomeAndAwayTeamNavProperties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201401101358256_AddedAspnetSimpleMembership.cs" />
+    <Compile Include="Migrations\201401101358256_AddedAspnetSimpleMembership.Designer.cs">
+      <DependentUpon>201401101358256_AddedAspnetSimpleMembership.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -138,6 +150,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201401101243093_AddedHomeAndAwayTeamNavProperties.resx">
       <DependentUpon>201401101243093_AddedHomeAndAwayTeamNavProperties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201401101358256_AddedAspnetSimpleMembership.resx">
+      <DependentUpon>201401101358256_AddedAspnetSimpleMembership.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
