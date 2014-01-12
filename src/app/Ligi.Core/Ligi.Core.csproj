@@ -43,11 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Commands\Contracts\AddBookie.cs" />
-    <Compile Include="Commands\Contracts\ProcessBets.cs" />
-    <Compile Include="Commands\Contracts\SubmitBetslip.cs" />
-    <Compile Include="Commands\Contracts\TransactPayout.cs" />
-    <Compile Include="Commands\Contracts\UpdateSeasonAccount.cs" />
+    <Compile Include="Commands\Domain\AddBookie.cs" />
+    <Compile Include="Commands\Domain\ProcessBets.cs" />
+    <Compile Include="Commands\Domain\SubmitBetslip.cs" />
+    <Compile Include="Commands\Domain\TransactPayout.cs" />
+    <Compile Include="Commands\Domain\UpdateSeasonAccount.cs" />
     <Compile Include="Commands\ICommand.cs" />
     <Compile Include="Commands\ICommandHandler.cs" />
     <Compile Include="Commands\ICommandHandlerRegistry.cs" />
@@ -60,18 +60,18 @@
     <Compile Include="DataAccess\IUnitOfWork.cs" />
     <Compile Include="DomainBase\IAggregateRoot.cs" />
     <Compile Include="DomainBase\IEntity.cs" />
-    <Compile Include="Events\Contracts\BetPlaced.cs" />
-    <Compile Include="Events\Contracts\BetRejected.cs" />
-    <Compile Include="Events\Contracts\BetslipSubmitted.cs" />
-    <Compile Include="Events\Contracts\BetsProcessed.cs" />
-    <Compile Include="Events\Contracts\BetUpdated.cs" />
-    <Compile Include="Events\Contracts\BetUpdateRejected.cs" />
-    <Compile Include="Events\Contracts\FixtureAccountUpdated.cs" />
-    <Compile Include="Events\Contracts\MatchResultConfirmed.cs" />
-    <Compile Include="Events\Contracts\MonthAccountUpdated.cs" />
-    <Compile Include="Events\Contracts\PayoutTransacted.cs" />
-    <Compile Include="Events\Contracts\SeasonAccountUpdated.cs" />
-    <Compile Include="Events\Contracts\WeekAccountOpened.cs" />
+    <Compile Include="Events\Domain\BetPlaced.cs" />
+    <Compile Include="Events\Domain\BetRejected.cs" />
+    <Compile Include="Events\Domain\BetslipSubmitted.cs" />
+    <Compile Include="Events\Domain\BetsProcessed.cs" />
+    <Compile Include="Events\Domain\BetUpdated.cs" />
+    <Compile Include="Events\Domain\BetUpdateRejected.cs" />
+    <Compile Include="Events\Domain\FixtureAccountUpdated.cs" />
+    <Compile Include="Events\Domain\MatchResultConfirmed.cs" />
+    <Compile Include="Events\Domain\MonthAccountUpdated.cs" />
+    <Compile Include="Events\Domain\PayoutTransacted.cs" />
+    <Compile Include="Events\Domain\SeasonAccountUpdated.cs" />
+    <Compile Include="Events\Domain\WeekAccountOpened.cs" />
     <Compile Include="Events\IEvent.cs" />
     <Compile Include="Events\IEventHandler.cs" />
     <Compile Include="Events\IEventHandlerRegistry.cs" />
