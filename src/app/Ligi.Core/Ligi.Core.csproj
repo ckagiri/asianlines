@@ -53,6 +53,7 @@
     <Compile Include="Commands\ICommandHandlerRegistry.cs" />
     <Compile Include="DataAccess\IContext.cs" />
     <Compile Include="DataAccess\IDataContext.cs" />
+    <Compile Include="DataAccess\IFixtureBookiesDao.cs" />
     <Compile Include="DataAccess\IFixtureRepository.cs" />
     <Compile Include="DataAccess\ILeagueRepository.cs" />
     <Compile Include="DataAccess\IRepository.cs" />
@@ -116,6 +117,12 @@
     <Compile Include="Model\SeasonAccount.cs" />
     <Compile Include="Model\SeasonTeam.cs" />
     <Compile Include="Model\Team.cs" />
+    <Compile Include="Processes\BetProcess.cs" />
+    <Compile Include="Processes\BetProcessRouter.cs" />
+    <Compile Include="Processes\BookieProcess.cs" />
+    <Compile Include="Processes\BookieProcessRouter.cs" />
+    <Compile Include="Processes\IProcessManager.cs" />
+    <Compile Include="Processes\IProcessManagerDataContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\Impl\PayoutService.cs" />
     <Compile Include="Services\IPayoutService.cs" />
