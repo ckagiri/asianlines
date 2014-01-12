@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Ligi.Core.Commands.Contracts
+namespace Ligi.Core.Commands.Domain
 {
     public class AddBookie : ICommand
     {

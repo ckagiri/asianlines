@@ -1,7 +1,7 @@
 ﻿using System;
 using Ligi.Core.Model;
 
-namespace Ligi.Core.Commands.Contracts
+namespace Ligi.Core.Commands.Domain
 {
     public class TransactPayout : ICommand
     {

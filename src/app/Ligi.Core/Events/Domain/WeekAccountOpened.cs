@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Ligi.Core.Events.Contracts
+namespace Ligi.Core.Events.Domain
 {
     public class WeekAccountOpened : VersionedEvent
     {
