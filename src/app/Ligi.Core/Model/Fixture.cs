@@ -37,7 +37,7 @@ namespace Ligi.Core.Model
 
     public enum MatchStatus
     {
-        Pending,
+        Scheduled,
         InProgress,
         Played,
         Cancelled,
