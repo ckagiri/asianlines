@@ -45,7 +45,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Messaging\Handling\MessageDispatcherFixture.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\app\Ligi.Core\Ligi.Core.csproj">
+      <Project>{326e4321-92a7-4b5a-ab53-d8abb9ea2602}</Project>
+      <Name>Ligi.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
