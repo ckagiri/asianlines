@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Ligi.Core.Model;
 
-namespace Ligi.Core.Commands.Contracts
+namespace Ligi.Core.Commands.Domain
 {
     public class SubmitBetslip : ICommand
     {
