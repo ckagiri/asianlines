@@ -52,6 +52,7 @@
     <Compile Include="Commands\ICommandHandler.cs" />
     <Compile Include="Commands\ICommandHandlerRegistry.cs" />
     <Compile Include="DataAccess\IContext.cs" />
+    <Compile Include="DataAccess\IDataContext.cs" />
     <Compile Include="DataAccess\IFixtureRepository.cs" />
     <Compile Include="DataAccess\ILeagueRepository.cs" />
     <Compile Include="DataAccess\IRepository.cs" />
@@ -83,6 +84,7 @@
     <Compile Include="Events\VersionedEvent.cs" />
     <Compile Include="Handlers\BettorCommandHandler.cs" />
     <Compile Include="Handlers\BookieCommandHandler.cs" />
+    <Compile Include="Handlers\FixtureBookiesHandler.cs" />
     <Compile Include="MessageLog\EventLogExtensions.cs" />
     <Compile Include="MessageLog\IEventLogReader.cs" />
     <Compile Include="MessageLog\QueryCriteria.cs" />
