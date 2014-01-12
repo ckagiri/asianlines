@@ -60,6 +60,18 @@
     <Compile Include="DataAccess\IUnitOfWork.cs" />
     <Compile Include="DomainBase\IAggregateRoot.cs" />
     <Compile Include="DomainBase\IEntity.cs" />
+    <Compile Include="Events\Contracts\BetPlaced.cs" />
+    <Compile Include="Events\Contracts\BetRejected.cs" />
+    <Compile Include="Events\Contracts\BetslipSubmitted.cs" />
+    <Compile Include="Events\Contracts\BetsProcessed.cs" />
+    <Compile Include="Events\Contracts\BetUpdated.cs" />
+    <Compile Include="Events\Contracts\BetUpdateRejected.cs" />
+    <Compile Include="Events\Contracts\FixtureAccountUpdated.cs" />
+    <Compile Include="Events\Contracts\MatchResultConfirmed.cs" />
+    <Compile Include="Events\Contracts\MonthAccountUpdated.cs" />
+    <Compile Include="Events\Contracts\PayoutTransacted.cs" />
+    <Compile Include="Events\Contracts\SeasonAccountUpdated.cs" />
+    <Compile Include="Events\Contracts\WeekAccountOpened.cs" />
     <Compile Include="Events\IEvent.cs" />
     <Compile Include="Events\IEventHandler.cs" />
     <Compile Include="Events\IEventHandlerRegistry.cs" />
@@ -81,6 +93,7 @@
     <Compile Include="Model\Betslip.cs" />
     <Compile Include="Model\BetTransaction.cs" />
     <Compile Include="Model\Fixture.cs" />
+    <Compile Include="Model\FixtureSubAccount.cs" />
     <Compile Include="Model\League.cs" />
     <Compile Include="Model\MatchOdds.cs" />
     <Compile Include="Model\MonthAccount.cs" />
