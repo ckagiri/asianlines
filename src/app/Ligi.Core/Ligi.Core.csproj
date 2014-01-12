@@ -60,6 +60,10 @@
     <Compile Include="DataAccess\IUnitOfWork.cs" />
     <Compile Include="DomainBase\IAggregateRoot.cs" />
     <Compile Include="DomainBase\IEntity.cs" />
+    <Compile Include="EventSourcing\EventSourced.cs" />
+    <Compile Include="EventSourcing\IEventSourced.cs" />
+    <Compile Include="EventSourcing\IEventSourcedRepository.cs" />
+    <Compile Include="EventSourcing\IMementoOriginator.cs" />
     <Compile Include="Events\Domain\BetPlaced.cs" />
     <Compile Include="Events\Domain\BetRejected.cs" />
     <Compile Include="Events\Domain\BetslipSubmitted.cs" />
