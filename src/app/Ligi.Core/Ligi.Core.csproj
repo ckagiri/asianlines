@@ -130,6 +130,9 @@
     <Compile Include="Utils\GuidComb.cs" />
     <Compile Include="Utils\GuidUtil.cs" />
     <Compile Include="Utils\MonToSunWeek.cs" />
+    <Compile Include="Validation\DomainValidationException.cs" />
+    <Compile Include="Validation\ValidationExtensions.cs" />
+    <Compile Include="Validation\ValidationResultInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
