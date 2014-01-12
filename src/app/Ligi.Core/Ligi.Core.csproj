@@ -43,6 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Commands\Contracts\AddBookie.cs" />
+    <Compile Include="Commands\Contracts\ProcessBets.cs" />
+    <Compile Include="Commands\Contracts\SubmitBetslip.cs" />
+    <Compile Include="Commands\Contracts\TransactPayout.cs" />
+    <Compile Include="Commands\Contracts\UpdateSeasonAccount.cs" />
     <Compile Include="Commands\ICommand.cs" />
     <Compile Include="Commands\ICommandHandler.cs" />
     <Compile Include="Commands\ICommandHandlerRegistry.cs" />
@@ -71,10 +76,16 @@
     <Compile Include="Messaging\IMetadataProvider.cs" />
     <Compile Include="Messaging\StandardMetadata.cs" />
     <Compile Include="Messaging\StandardMetadataProvider.cs" />
+    <Compile Include="Model\Bet.cs" />
+    <Compile Include="Model\BetItem.cs" />
+    <Compile Include="Model\Betslip.cs" />
+    <Compile Include="Model\BetTransaction.cs" />
     <Compile Include="Model\Fixture.cs" />
     <Compile Include="Model\League.cs" />
     <Compile Include="Model\MatchOdds.cs" />
+    <Compile Include="Model\MonthAccount.cs" />
     <Compile Include="Model\Season.cs" />
+    <Compile Include="Model\SeasonAccount.cs" />
     <Compile Include="Model\SeasonTeam.cs" />
     <Compile Include="Model\Team.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
