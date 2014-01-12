@@ -9,6 +9,7 @@ namespace Ligi.Web.Admin
         public static string ControllerOnly = "ApiControllerOnly";
         public static string ControllerAndId = "ApiControllerAndGuidId";
         public static string ControllerAction = "ApiControllerAction";
+        public static string MvcController = "Default";
 
         public static void RegisterRoutes(RouteCollection routes)
         {
@@ -35,7 +36,7 @@ namespace Ligi.Web.Admin
             );
 
             routes.MapRoute(
-                name: "Default",
+                name: MvcController,
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
