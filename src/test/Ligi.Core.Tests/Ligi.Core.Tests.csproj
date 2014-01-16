@@ -49,6 +49,7 @@
     <Compile Include="BettorFixture.cs" />
     <Compile Include="BookieFixture.cs" />
     <Compile Include="EventSourcingTestHelper.cs" />
+    <Compile Include="FixtureBookiesFixture.cs" />
     <Compile Include="Messaging\Handling\MessageDispatcherFixture.cs" />
     <Compile Include="PayoutServiceFixture.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
