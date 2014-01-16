@@ -115,6 +115,9 @@
     <Compile Include="DataAccess\TeamRepository.cs" />
     <Compile Include="DataAccess\UnitOfWork.cs" />
     <Compile Include="Database\AdminDbContext.cs" />
+    <Compile Include="Database\BettingProcessDbContext.cs" />
+    <Compile Include="Database\IndexDictionaryDbContext.cs" />
+    <Compile Include="Database\SqlDataContext.cs" />
     <Compile Include="EntityNotFoundException.cs" />
     <Compile Include="EventSourcing\EventStoreDbContext.cs" />
     <Compile Include="EventSourcing\SqlEventSourcedRepository.cs" />
