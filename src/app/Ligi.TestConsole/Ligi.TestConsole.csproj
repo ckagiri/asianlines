@@ -56,6 +56,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Ligi.Core\Ligi.Core.csproj">
+      <Project>{326E4321-92A7-4B5A-AB53-D8ABB9EA2602}</Project>
+      <Name>Ligi.Core</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Ligi.Infrastructure.Sql\Ligi.Infrastructure.Sql.csproj">
       <Project>{29a30d12-59de-401e-9b07-4710d0351680}</Project>
       <Name>Ligi.Infrastructure.Sql</Name>
