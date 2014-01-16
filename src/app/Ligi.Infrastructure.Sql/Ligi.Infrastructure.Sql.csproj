@@ -167,6 +167,10 @@
     <Compile Include="Serialization\ITextSerializer.cs" />
     <Compile Include="Serialization\JsonTextSerializer.cs" />
     <Compile Include="Serialization\TextSerializerExtensions.cs" />
+    <Compile Include="Tasks\TimerTaskFactory.cs" />
+    <Compile Include="Validation\IValidator.cs" />
+    <Compile Include="Validation\SaveLeagueValidator.cs" />
+    <Compile Include="Validation\SaveSeasonValidator.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Ligi.Core\Ligi.Core.csproj">
@@ -197,6 +201,9 @@
     <EmbeddedResource Include="Migrations\201401101358256_AddedAspnetSimpleMembership.resx">
       <DependentUpon>201401101358256_AddedAspnetSimpleMembership.cs</DependentUpon>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Utils\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
