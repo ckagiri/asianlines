@@ -45,6 +45,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BettorFixture.cs" />
+    <Compile Include="EventSourcingTestHelper.cs" />
     <Compile Include="Messaging\Handling\MessageDispatcherFixture.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
