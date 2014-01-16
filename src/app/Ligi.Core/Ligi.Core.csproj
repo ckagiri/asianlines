@@ -86,6 +86,7 @@
     <Compile Include="Handlers\BettorCommandHandler.cs" />
     <Compile Include="Handlers\BookieCommandHandler.cs" />
     <Compile Include="Handlers\FixtureBookiesHandler.cs" />
+    <Compile Include="IProcessor.cs" />
     <Compile Include="MessageLog\EventLogExtensions.cs" />
     <Compile Include="MessageLog\IEventLogReader.cs" />
     <Compile Include="MessageLog\QueryCriteria.cs" />
