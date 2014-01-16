@@ -82,6 +82,7 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -117,6 +118,23 @@
     <Compile Include="EventSourcing\EventStoreDbContext.cs" />
     <Compile Include="EventSourcing\SqlEventSourcedRepository.cs" />
     <Compile Include="ExpressionCombiner.cs" />
+    <Compile Include="MessageLog\MessageLogDbContext.cs" />
+    <Compile Include="MessageLog\MessageLogEntity.cs" />
+    <Compile Include="MessageLog\QueryCriteriaExtensions.cs" />
+    <Compile Include="MessageLog\SqlMessageLog.cs" />
+    <Compile Include="MessageLog\SqlMessageLogHandler.cs" />
+    <Compile Include="Messaging\CommandBus.cs" />
+    <Compile Include="Messaging\EventBus.cs" />
+    <Compile Include="Messaging\Handling\CommandProcessor.cs" />
+    <Compile Include="Messaging\Handling\EventProcessor.cs" />
+    <Compile Include="Messaging\Handling\MessageProcessor.cs" />
+    <Compile Include="Messaging\IMessageReceiver.cs" />
+    <Compile Include="Messaging\IMessageSender.cs" />
+    <Compile Include="Messaging\Implementation\MessageReceiver.cs" />
+    <Compile Include="Messaging\Implementation\MessageSender.cs" />
+    <Compile Include="Messaging\Implementation\MessagingDbInitializer.cs" />
+    <Compile Include="Messaging\Message.cs" />
+    <Compile Include="Messaging\MessageReceivedEventArgs.cs" />
     <Compile Include="Migrations\201312200606076_InitialCreate.cs" />
     <Compile Include="Migrations\201312200606076_InitialCreate.Designer.cs">
       <DependentUpon>201312200606076_InitialCreate.cs</DependentUpon>
