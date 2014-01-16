@@ -1,11 +1,12 @@
 ﻿using System.Configuration;
 using System.Data.Entity;
+using Ligi.Core.DataAccess;
 using Ligi.Core.Model;
 using Ligi.Infrastructure.Sql.AspnetSimpleMembership;
 
 namespace Ligi.Infrastructure.Sql.Database
 {
-    public class AdminDbContext : DbContext
+    public class AdminDbContext : DbContext, IContext
     {
         public AdminDbContext() : base(nameOrConnectionString: ConnectionStringName)
         { }
