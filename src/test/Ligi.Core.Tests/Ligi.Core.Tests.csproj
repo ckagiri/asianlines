@@ -45,9 +45,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BetProcessFixture.cs" />
+    <Compile Include="BetProcessRouterFixture.cs" />
     <Compile Include="BetslipFixture.cs" />
     <Compile Include="BettorFixture.cs" />
     <Compile Include="BookieFixture.cs" />
+    <Compile Include="BookieProcessFixture.cs" />
+    <Compile Include="BookieProcessRouterFixture.cs" />
+    <Compile Include="EnumerableEventsExtensions.cs" />
     <Compile Include="EventSourcingTestHelper.cs" />
     <Compile Include="FixtureBookiesFixture.cs" />
     <Compile Include="Messaging\Handling\MessageDispatcherFixture.cs" />
