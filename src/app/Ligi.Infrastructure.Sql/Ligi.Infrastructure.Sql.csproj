@@ -115,6 +115,7 @@
     <Compile Include="DataAccess\TeamRepository.cs" />
     <Compile Include="DataAccess\UnitOfWork.cs" />
     <Compile Include="Database\AdminDbContext.cs" />
+    <Compile Include="Database\BetsDbContext.cs" />
     <Compile Include="Database\BettingProcessDbContext.cs" />
     <Compile Include="Database\IndexDictionaryDbContext.cs" />
     <Compile Include="Database\SqlDataContext.cs" />
@@ -167,6 +168,17 @@
     <Compile Include="Processes\SqlProcessManagerDataContext.cs" />
     <Compile Include="Processes\UndispatchedMessages.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReadModel\Bet.cs" />
+    <Compile Include="ReadModel\Contracts\IBetsDao.cs" />
+    <Compile Include="ReadModel\Contracts\ILeaderBoardDao.cs" />
+    <Compile Include="ReadModel\Contracts\IUserDao.cs" />
+    <Compile Include="ReadModel\Contracts\IWeekAccountDao.cs" />
+    <Compile Include="ReadModel\Contracts\UserDao.cs" />
+    <Compile Include="ReadModel\Impl\BetsDao.cs" />
+    <Compile Include="ReadModel\Impl\LeaderBoardDao.cs" />
+    <Compile Include="ReadModel\Impl\WeekAccountDao.cs" />
+    <Compile Include="ReadModel\LeaderBoard.cs" />
+    <Compile Include="ReadModel\WeekAccount.cs" />
     <Compile Include="Serialization\ITextSerializer.cs" />
     <Compile Include="Serialization\JsonTextSerializer.cs" />
     <Compile Include="Serialization\TextSerializerExtensions.cs" />

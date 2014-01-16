@@ -1,5 +1,7 @@
-﻿using System.Configuration;
+﻿using System;
+using System.Configuration;
 using System.Data.Entity;
+using System.Linq;
 using Ligi.Core.DataAccess;
 using Ligi.Core.Model;
 using Ligi.Infrastructure.Sql.AspnetSimpleMembership;
@@ -60,6 +62,16 @@ namespace Ligi.Infrastructure.Sql.Database
 
                 return "DefaultConnection";
             }
+        }
+
+        public T Find<T>(Guid id) where T : class
+        {
+            return Set<T>().Find(id);
+        }
+
+        public IQueryable<T> Query<T>() where T : class
+        {
+            return Set<T>();
         }
     }
 }
