@@ -8,7 +8,7 @@ namespace Ligi.Infrastructure.Sql.AspnetSimpleMembership
         {
             this.Property(p => p.Id).HasColumnOrder(0);
 
-            this.Property(p => p.Username)
+            this.Property(p => p.UserName)
                 .IsRequired().HasMaxLength(200);
 
             this.Property(p => p.FirstName)

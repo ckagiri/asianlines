@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace Ligi.Infrastructure.Sql.AspnetSimpleMembership
 {
@@ -10,6 +11,6 @@ namespace Ligi.Infrastructure.Sql.AspnetSimpleMembership
 	{
 		public string Provider {get;set;}
 		public string ProviderUserId {get;set;}
-		public int UserId { get; set; }
+		public Guid UserId { get; set; }
 	}
 }

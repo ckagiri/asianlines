@@ -1,13 +1,14 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace Ligi.Infrastructure.Sql.AspnetSimpleMembership
 {
     public class User
     {
-        public int Id { get; set; }
+        public Guid Id { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        public string Username { get; set; }
+        public string UserName { get; set; }
 
         public ICollection<Role> Roles { get; set; }
 
