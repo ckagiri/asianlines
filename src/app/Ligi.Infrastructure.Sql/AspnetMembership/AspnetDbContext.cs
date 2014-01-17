@@ -1,4 +1,5 @@
 using System;
+using System.Configuration;
 using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Linq;
@@ -8,19 +9,12 @@ namespace Ligi.Infrastructure.Sql.AspnetMembership
 {
     public class AspnetDbContext : DbContext
     {
-        static AspnetDbContext()
-        {
-            System.Data.Entity.Database.SetInitializer<AspnetDbContext>(null);
-        }
-
-        public AspnetDbContext()
-            : base(nameOrConnectionString: "Ligi")
+        public AspnetDbContext() : base(nameOrConnectionString: ConnectionStringName)
         { }
 
-        public AspnetDbContext(string nameOrConnectionString)
-            : base(nameOrConnectionString)
+        public AspnetDbContext(string nameOrConnectionString) : base(nameOrConnectionString)
         { }
-
+        
         public DbSet<Application> Applications { get; set; }
         public DbSet<Membership> Memberships { get; set; }
         public DbSet<Profile> Profiles { get; set; }
@@ -41,6 +35,22 @@ namespace Ligi.Infrastructure.Sql.AspnetMembership
 
             modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
         }
+
+        public static string ConnectionStringName
+        {
+            get
+            {
+                if (ConfigurationManager.AppSettings["ConnectionStringName"]
+                    != null)
+                {
+                    return ConfigurationManager.
+                        AppSettings["ConnectionStringName"];
+                }
+
+                return "DefaultConnection";
+            }
+        }
+
 
         public T Find<T>(Guid id) where T : class
         {
