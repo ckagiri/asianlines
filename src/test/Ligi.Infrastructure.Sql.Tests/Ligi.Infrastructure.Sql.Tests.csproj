@@ -56,6 +56,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BetProcessDbContextFixture.cs" />
+    <Compile Include="BookieProcessDbContextFixture.cs" />
     <Compile Include="Messaging\CommandProcessorFixture.cs" />
     <Compile Include="Messaging\EventProcessorFixture.cs" />
     <Compile Include="Messaging\MessageReceiverFixture.cs" />
