@@ -177,6 +177,10 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Processes\SqlProcessManagerDataContext.cs" />
     <Compile Include="Processes\UndispatchedMessages.cs" />
+    <Compile Include="Projections\BookieAccountProjection.cs" />
+    <Compile Include="Projections\BookieBetsProjection.cs" />
+    <Compile Include="Projections\MonthLeaderBoardProjection.cs" />
+    <Compile Include="Projections\SeasonLeaderBoardProjection.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReadModel\Bet.cs" />
     <Compile Include="ReadModel\Contracts\IBetsDao.cs" />
