@@ -92,8 +92,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AspnetMembership\Application.cs" />
-    <Compile Include="AspnetMembership\AspnetDbContext.cs" />
-    <Compile Include="AspnetMembership\AspnetDbInitializer.cs" />
     <Compile Include="AspnetMembership\Configuration\ApplicationConfiguration.cs" />
     <Compile Include="AspnetMembership\Configuration\MembershipConfiguration.cs" />
     <Compile Include="AspnetMembership\Configuration\ProfileConfiguration.cs" />
@@ -124,7 +122,15 @@
     <Compile Include="DataAccess\UnitOfWork.cs" />
     <Compile Include="Database\AdminDbContext.cs" />
     <Compile Include="Database\BetsDbContext.cs" />
-    <Compile Include="Database\BettingProcessDbContext.cs" />
+    <Compile Include="Migrations\201401171356260_RemoveOneToManyCascadeDeleteConvention.cs" />
+    <Compile Include="Migrations\201401171356260_RemoveOneToManyCascadeDeleteConvention.Designer.cs">
+      <DependentUpon>201401171356260_RemoveOneToManyCascadeDeleteConvention.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201401171357226_MembershipInitial.cs" />
+    <Compile Include="Migrations\201401171357226_MembershipInitial.Designer.cs">
+      <DependentUpon>201401171357226_MembershipInitial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Processes\BettingProcessDbContext.cs" />
     <Compile Include="Database\IndexDictionaryDbContext.cs" />
     <Compile Include="Database\SqlDataContext.cs" />
     <Compile Include="EntityNotFoundException.cs" />
@@ -167,10 +173,6 @@
     <Compile Include="Migrations\201401101243093_AddedHomeAndAwayTeamNavProperties.cs" />
     <Compile Include="Migrations\201401101243093_AddedHomeAndAwayTeamNavProperties.Designer.cs">
       <DependentUpon>201401101243093_AddedHomeAndAwayTeamNavProperties.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201401101358256_AddedAspnetSimpleMembership.cs" />
-    <Compile Include="Migrations\201401101358256_AddedAspnetSimpleMembership.Designer.cs">
-      <DependentUpon>201401101358256_AddedAspnetSimpleMembership.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Processes\SqlProcessManagerDataContext.cs" />
@@ -221,8 +223,11 @@
     <EmbeddedResource Include="Migrations\201401101243093_AddedHomeAndAwayTeamNavProperties.resx">
       <DependentUpon>201401101243093_AddedHomeAndAwayTeamNavProperties.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201401101358256_AddedAspnetSimpleMembership.resx">
-      <DependentUpon>201401101358256_AddedAspnetSimpleMembership.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201401171356260_RemoveOneToManyCascadeDeleteConvention.resx">
+      <DependentUpon>201401171356260_RemoveOneToManyCascadeDeleteConvention.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201401171357226_MembershipInitial.resx">
+      <DependentUpon>201401171357226_MembershipInitial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

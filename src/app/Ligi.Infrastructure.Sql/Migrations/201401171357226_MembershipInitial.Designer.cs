@@ -7,13 +7,13 @@ namespace Ligi.Infrastructure.Sql.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.0.2-21211")]
-    public sealed partial class AddedAspnetSimpleMembership : IMigrationMetadata
+    public sealed partial class MembershipInitial : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(AddedAspnetSimpleMembership));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(MembershipInitial));
         
         string IMigrationMetadata.Id
         {
-            get { return "201401101358256_AddedAspnetSimpleMembership"; }
+            get { return "201401171357226_MembershipInitial"; }
         }
         
         string IMigrationMetadata.Source

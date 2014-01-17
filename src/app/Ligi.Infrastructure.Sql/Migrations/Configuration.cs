@@ -1,7 +1,6 @@
 using System.Collections.ObjectModel;
 using Ligi.Core.Model;
 using Ligi.Core.Utils;
-using Ligi.Infrastructure.Sql.AspnetMembership;
 using Ligi.Infrastructure.Sql.Database;
 using System;
 using System.Data.Entity.Migrations;

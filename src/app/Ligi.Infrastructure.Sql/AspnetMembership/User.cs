@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Ligi.Infrastructure.Sql.AspnetMembership
 {
-    public partial class User
+    public class User
     {
         public User()
         {

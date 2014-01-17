@@ -1,8 +1,7 @@
 ﻿using System.Data.Entity;
 using Ligi.Core.Processes;
-using Ligi.Infrastructure.Sql.Processes;
 
-namespace Ligi.Infrastructure.Sql.Database
+namespace Ligi.Infrastructure.Sql.Processes
 {
     public class BettingProcessDbContext : DbContext
     {
