@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Linq;
-using Ligi.Infrastructure.Sql.AspnetSimpleMembership;
+using Ligi.Infrastructure.Sql.AspnetMembership;
 using Ligi.Infrastructure.Sql.Database;
 
 namespace Ligi.Infrastructure.Sql.ReadModel.Contracts
@@ -18,7 +18,7 @@ namespace Ligi.Infrastructure.Sql.ReadModel.Contracts
         {
             using (var context = _contextFactory.Invoke())
             {
-                var user = context.Query<User>().FirstOrDefault(u => u.Id == userId);
+                var user = context.Query<User>().FirstOrDefault(u => u.UserId == userId);
                 if (user != null)
                 {
                     return user.UserName;

@@ -91,14 +91,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AspnetSimpleMembership\Configuration\MembershipConfiguration.cs" />
-    <Compile Include="AspnetSimpleMembership\Configuration\OAuthMembershipConfiguration.cs" />
-    <Compile Include="AspnetSimpleMembership\Configuration\RoleConfiguration.cs" />
-    <Compile Include="AspnetSimpleMembership\Configuration\UserConfiguration.cs" />
-    <Compile Include="AspnetSimpleMembership\Membership.cs" />
-    <Compile Include="AspnetSimpleMembership\OAuthMembership.cs" />
-    <Compile Include="AspnetSimpleMembership\Role.cs" />
-    <Compile Include="AspnetSimpleMembership\User.cs" />
+    <Compile Include="AspnetMembership\Application.cs" />
+    <Compile Include="AspnetMembership\AspnetDbContext.cs" />
+    <Compile Include="AspnetMembership\AspnetDbInitializer.cs" />
+    <Compile Include="AspnetMembership\Configuration\ApplicationConfiguration.cs" />
+    <Compile Include="AspnetMembership\Configuration\MembershipConfiguration.cs" />
+    <Compile Include="AspnetMembership\Configuration\ProfileConfiguration.cs" />
+    <Compile Include="AspnetMembership\Configuration\RoleConfiguration.cs" />
+    <Compile Include="AspnetMembership\Configuration\UserConfiguration.cs" />
+    <Compile Include="AspnetMembership\Configuration\UsersOpenAuthAccountConfiguration.cs" />
+    <Compile Include="AspnetMembership\Configuration\UsersOpenAuthDataConfiguration.cs" />
+    <Compile Include="AspnetMembership\Membership.cs" />
+    <Compile Include="AspnetMembership\Profile.cs" />
+    <Compile Include="AspnetMembership\Role.cs" />
+    <Compile Include="AspnetMembership\User.cs" />
+    <Compile Include="AspnetMembership\UsersOpenAuthAccount.cs" />
+    <Compile Include="AspnetMembership\UsersOpenAuthData.cs" />
     <Compile Include="Common\CacheAnyEnumerableExtensions.cs" />
     <Compile Include="Common\CollectionExtensions.cs" />
     <Compile Include="Common\DictionaryExtensions.cs" />

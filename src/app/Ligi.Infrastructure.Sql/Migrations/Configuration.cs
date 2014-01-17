@@ -1,7 +1,7 @@
 using System.Collections.ObjectModel;
 using Ligi.Core.Model;
 using Ligi.Core.Utils;
-using Ligi.Infrastructure.Sql.AspnetSimpleMembership;
+using Ligi.Infrastructure.Sql.AspnetMembership;
 using Ligi.Infrastructure.Sql.Database;
 using System;
 using System.Data.Entity.Migrations;
@@ -26,16 +26,6 @@ namespace Ligi.Infrastructure.Sql.Migrations
 
             AddTeamsToSeason(context, leagues, seasons, teams);
             AddFixturesToSeason(context, leagues, seasons, teams);
-            SeedMembership(context  );
-        }
-
-        private void SeedMembership(AdminDbContext context)
-        {
-            var roles = new[]
-                            {
-                                new Role {RoleName = "admin"}, new Role {RoleName = "user"}
-                            };
-            context.Roles.AddOrUpdate(r => r.RoleName, roles);
         }
 
         private League[] AddLeagues(AdminDbContext context)
