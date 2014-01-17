@@ -4,7 +4,7 @@ using System.Data.Entity;
 using System.Linq;
 using Ligi.Core.DataAccess;
 using Ligi.Core.Model;
-using Ligi.Infrastructure.Sql.AspnetSimpleMembership;
+using Ligi.Infrastructure.Sql.AspnetMembership.Configuration;
 
 namespace Ligi.Infrastructure.Sql.Database
 {
@@ -20,8 +20,6 @@ namespace Ligi.Infrastructure.Sql.Database
         public DbSet<Season> Seasons { get; set; }
         public DbSet<Team> Teams { get; set; }
         public DbSet<Fixture> Fixtures { get; set; }
-        public DbSet<User> Users { get; set; }
-        public DbSet<Role> Roles { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -42,11 +40,6 @@ namespace Ligi.Infrastructure.Sql.Database
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Configurations.Add(new UserConfiguration());
-
-            // ASP.NET WebPages SimpleSecurity tables
-            modelBuilder.Configurations.Add(new RoleConfiguration());
-            modelBuilder.Configurations.Add(new OAuthMembershipConfiguration());
-            modelBuilder.Configurations.Add(new MembershipConfiguration());
         }
 
         public static string ConnectionStringName
