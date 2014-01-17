@@ -30,6 +30,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\..\app\Ligi.Web.Public\bin\EntityFramework.dll</HintPath>
+    </Reference>
     <Reference Include="Moq">
       <HintPath>..\..\..\thirdparty\libs\Moq.4.2.1312.1622\lib\net40\Moq.dll</HintPath>
     </Reference>
@@ -38,6 +41,7 @@
       <HintPath>..\..\..\thirdparty\libs\NUnit.2.6.3\lib\nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -53,9 +57,22 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SqlDataContextFixture.cs" />
+    <Compile Include="SqlEventLogFixture.cs" />
+    <Compile Include="SqlProcessManagerDataContextFixture.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\app\Ligi.Core\Ligi.Core.csproj">
+      <Project>{326E4321-92A7-4B5A-AB53-D8ABB9EA2602}</Project>
+      <Name>Ligi.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\app\Ligi.Infrastructure.Sql\Ligi.Infrastructure.Sql.csproj">
+      <Project>{29A30D12-59DE-401E-9B07-4710D0351680}</Project>
+      <Name>Ligi.Infrastructure.Sql</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
